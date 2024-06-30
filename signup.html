@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - DP Cab Booking</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sign Up for DP Cab Booking</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <!-- Add more navigation links as needed -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="container">
+            <h2>Create Your Account</h2>
+            <form action="/signup" method="POST">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Sign Up">
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DP Cab Booking. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

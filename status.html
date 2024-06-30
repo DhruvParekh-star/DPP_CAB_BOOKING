@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Status - DP Cab Booking</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DP Cab Booking</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="confirmation.html">Confirmation</a></li>
+                    <li><a href="status.html">Status</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="status">
+        <div class="container">
+            <h2>Ride Status</h2>
+            <p>Status: <span id="ride-status">Waiting for driver...</span></p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DP Cab Booking. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="app.js"></script> <!-- Link to your JavaScript file -->
+    <script>
+        // Example JavaScript for updating ride status
+        setInterval(async () => {
+            const response = await fetch('/status');
+            const status = await response.json();
+            document.getElementById('ride-status').innerText = status.message;
+        }, 5000); // Update every 5 seconds
+    </script>
+</body>
+</html>
